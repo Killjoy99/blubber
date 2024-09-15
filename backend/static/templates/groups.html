@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+<title>{% block title %}Buntu Foods{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Groups List</h1>
+    <ul id="groups-list">
+        <!-- Groups will be dynamically loaded here -->
+    </ul>
+    <button onclick="createGroup()">Create New Group</button>
+</div>
+
+<script src="{{ url_for('static', path='js/groups.js') }}"></script>
+
+{% endblock %}

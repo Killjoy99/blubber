@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+    <title>{% block title %}Buntu Foods{% endblock %}</title>
+
+{% block content %}
+
+
+
+<div class="container">
+    <h1>Group Chat</h1>
+    <div id="chat-window">
+        <!-- Chat messages will be dynamically loaded here -->
+    </div>
+    <input type="text" id="message" placeholder="Type a message">
+    <button onclick="sendMessage()">Send</button>
+</div>
+<script src="{{ url_for('static', path='js/groupchat.js') }}"></script>
+
+{% endblock %}

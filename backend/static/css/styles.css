@@ -1,0 +1,151 @@
+/* Futuristic body styling */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(32,34,36,1) 0%, rgba(26,28,30,1) 50%, rgba(20,22,24,1) 100%);
+    color: #fff;
+}
+
+/* Container styling for futuristic look */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0px;
+    padding: 60px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* H1 title with pink neon glow */
+/* H1 title with neon color-changing glow */
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #ff4da6;
+    text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6;
+    animation: glow 2s infinite ease-in-out, colorShift 6s infinite linear;
+}
+
+/* Glow effect animation */
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6; }
+    50% { text-shadow: 0 0 15px #ff4da6, 0 0 30px #ff4da6; }
+    100% { text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6; }
+}
+
+/* Color shift animation for the H1 */
+@keyframes colorShift {
+    0% { color: #ff4da6; text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6; }
+    25% { color: #ff66cc; text-shadow: 0 0 10px #ff66cc, 0 0 20px #ff66cc; }
+    50% { color: #ff99ff; text-shadow: 0 0 10px #ff99ff, 0 0 20px #ff99ff; }
+    75% { color: #66ccff; text-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff; }
+    100% { color: #ff4da6; text-shadow: 0 0 10px #ff4da6, 0 0 20px #ff4da6; }
+}
+
+
+/* Input and button design */
+.username-form {
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    padding: 15px;
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #ff4da6;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1.2em;
+    font-family: Arial, sans-serif; /* More readable for input fields */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 77, 166, 0.3), 0 0 25px rgba(255, 77, 166, 0.1);
+}
+
+input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 1px solid #ff4da6; /* Add a clear focus outline */
+    border-color: #ff4da6;
+    box-shadow: 0 0 20px rgba(255, 77, 166, 0.5), 0 0 30px rgba(255, 77, 166, 0.3);
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button design with pink glow effect */
+button {
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 0px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+    color: white;
+    background: linear-gradient(45deg, #ff4da6, #ff007f);
+    box-shadow: 0px 10px 20px rgba(255, 0, 127, 0.5), 0px 15px 30px rgba(255, 0, 127, 0.3);
+}
+
+/* Button hover effects */
+button:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(255, 0, 127, 0.7), 0px 20px 35px rgba(255, 0, 127, 0.5);
+    background: linear-gradient(45deg, #ff66b3, #ff3399);
+}
+
+button:active {
+    transform: scale(0.95) translateY(0);
+}
+
+.container {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5em;
+}
+
+
+
+/* Futuristic fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Screen sizes management */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+    input[type="text"] {
+        width: 90%;
+    }
+    button {
+        width: 90%;
+    }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Join Bubbler for a futuristic chat experience.">
+        <meta property="og:title" content="Bubbler">
+        <meta property="og:description" content="Join Bubbler for a futuristic chat experience.">
+        <meta property="og:image" content="{{ url_for('static', path='images/preview.png') }}">
+        <meta name="author" content="Blubber">
+        <title>{% block title %}Blubber{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', path='bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', path='bootstrap/css/bootstrap-icons.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}?v={{ range(1, 1000) | random }}">
+        <link rel="stylesheet" href="{{ url_for('static', path='css/matching.css') }}?v={{ range(1, 1000) | random }}">
+
+        
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

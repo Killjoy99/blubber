@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+<title>{% block title %}Bubbler{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div id="sidebar">
+        <h2>Friends</h2>
+        <ul id="friends-list">
+            <!-- Friends will be added here -->
+        </ul>
+    </div>
+    <div id="main-content">
+        <h1>Matching Screen</h1>
+        <div id="match-info">
+            <p>Finding a match...</p>
+        </div>
+        <div class="buttons">
+            <button onclick="findNewMatch()">Find New Match</button>
+            <button onclick="skipMatch()">Skip</button>
+            <button onclick="addAsFriend()">Add as Friend</button>
+        </div>
+        <!-- Chat area -->
+        <div id="chat-area" style="display: none;">
+            <div id="chat-box">
+                <!-- Messages will be appended here -->
+            </div>
+            <div id="message-input">
+                <input type="text" id="message" placeholder="Type a message..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', path='js/matching.js') }}"></script>
+{% endblock %}
